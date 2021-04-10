@@ -1,9 +1,3 @@
-# Add any directories, files, or patterns you don't want to be tracked by version control
-# node.js
-#
-npm-debug.log
-node_modules/
-
 # OSX
 #
 .DS_Store
@@ -26,27 +20,40 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
 
-# Android/IJ
+# Android/IntelliJ
 #
+build/
 .idea
 .gradle
 local.properties
+*.iml
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
 
 # BUCK
-#
 buck-out/
 \.buckd/
-android/app/libs
-android/keystores/debug.keystore
+*.keystore
+!debug.keystore
 
-# Project Files/ Folders
+# fastlane
 #
-reports/
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
 
-__snapshots__
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Bundle artifact
+*.jsbundle
 
 # CocoaPods
-#
-Pods
+/ios/Pods/
